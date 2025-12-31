@@ -15,6 +15,7 @@ export async function authenticateUser(req, res, next) {
     }
     const checkUsername = await checkUser(username, password);
     if (checkUsername === "userFound!") {
+      req.authenticateUser = username;
       // const getUser = await getAllUsers();
       // console.log(getUser);
       next();
@@ -52,3 +53,34 @@ export async function authenticateId(req, res, next) {
   }
 };
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
